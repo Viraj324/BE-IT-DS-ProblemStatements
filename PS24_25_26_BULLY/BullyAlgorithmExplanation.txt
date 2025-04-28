@@ -1,0 +1,58 @@
+
+Bully Algorithm Explanation and Java Code Walkthrough
+======================================================
+
+What this Algorithm Does:
+--------------------------
+- The Bully Algorithm is used for electing a new "leader" (coordinator) among distributed processes.
+- If the current leader fails, other processes compete to become the new leader.
+- The process with the highest ID among active processes becomes the new coordinator.
+
+Why it is Used:
+---------------
+- In distributed systems, it's important to have a coordinator to manage tasks, assign work, or maintain system consistency.
+- If the leader fails, the system must quickly elect a new leader without manual intervention.
+- The Bully Algorithm ensures that the process with the highest priority (highest ID) becomes the leader.
+
+Step-by-Step Explanation of the Code:
+--------------------------------------
+1. The program starts by taking input:
+   - Number of processes.
+   - IDs of each process.
+
+2. The process with the highest ID is initially selected as the coordinator.
+
+3. If any process detects that the coordinator has failed, it starts an election:
+   - Sends an election message to all processes with higher IDs.
+
+4. If no higher process responds:
+   - The initiating process declares itself the new coordinator.
+
+5. If a higher ID process responds:
+   - The responding process takes over the election and repeats the same process.
+
+6. Finally, when no higher process is found, that process becomes the new coordinator.
+   - It sends a "Coordinator" message to all active processes.
+
+Steps to Run the Program:
+--------------------------
+1. Copy the Java code into a file named "Main.java".
+2. Open a terminal/command prompt.
+3. Compile the Java file using:
+   javac Main.java
+4. Run the compiled Java program using:
+   java Main
+5. Follow the prompts to input:
+   - Number of processes.
+   - Their IDs.
+   - Process ID which detects coordinator failure.
+
+How the Output is Gained:
+-------------------------
+- As soon as a process detects failure, it sends "Election" messages to higher ID processes.
+- Higher ID processes respond back.
+- The election continues until the highest active process is found.
+- That process sends "Coordinator" messages to all others announcing itself as the new leader.
+- All the messages (Election and Coordinator) are printed to the console.
+
+======================================================

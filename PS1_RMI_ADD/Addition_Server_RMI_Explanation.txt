@@ -1,0 +1,69 @@
+
+1.1) Addition Server using RMI (Multi-threaded Client/Server Communication)
+
+Date: 2025-04-28
+
+------------------------------------------------------------
+💬 What is RMI?
+- RMI stands for Remote Method Invocation.
+- It allows a Java object on one machine (client) to invoke methods on an object running on another machine (server).
+- RMI handles communication details like sockets, object serialization, and remote object references.
+
+------------------------------------------------------------
+⚙️ What it is used for?
+- To create distributed applications in Java.
+- Useful when two or more Java programs need to communicate over a network.
+- Allows one program to call methods in another program as if they were local methods.
+- RMI provides automatic handling of communication, making remote method calls appear seamless.
+
+------------------------------------------------------------
+📜 What you implemented:
+
+- You created an RMI-based program that performs Addition of two numbers remotely.
+- Server:
+  - Hosts an object with an 'add' method that takes two integers and returns their sum.
+- Client:
+  - Connects to the remote object.
+  - Calls the 'add' method and displays the result.
+
+- Two different machines:
+  - Server runs on one machine.
+  - Client runs on another machine, connecting over the network.
+
+------------------------------------------------------------
+🛠️ Multi-threading in RMI Server:
+
+- RMI server uses multi-threading internally.
+- When multiple clients connect at the same time, the server creates a separate thread for each client request.
+- This allows the server to handle multiple requests concurrently without waiting for one client to finish.
+- You don’t need to manually create threads — RMI registry and server automatically manage it.
+
+✅ Advantages of Multi-threading here:
+- Faster response time for clients.
+- Server can handle many clients simultaneously.
+- Improves scalability and performance.
+
+------------------------------------------------------------
+🛠️ Technologies Used:
+| Component | Technology |
+|:---------|:-----------|
+| Communication | Java RMI |
+| Networking | TCP/IP |
+| Language | Java |
+| Features | Serialization, Registry, Stubs and Skeletons, Multi-threading |
+
+------------------------------------------------------------
+✨ Final Summary (For Viva):
+"I developed an Addition Server using Java RMI, enabling two different machines to communicate. The server hosted an addition method that the client remotely invoked. The RMI server internally handled multiple client connections using multi-threading, ensuring simultaneous processing of multiple client requests."
+
+------------------------------------------------------------
+⚡ Quick Diagram:
+Client (Machine 1)
+    ↓
+RMI Call (TCP/IP)
+    ↓
+Server (Machine 2) → New thread for each request
+    ↓
+Addition performed
+    ↓
+Result sent back to client

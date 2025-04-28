@@ -1,3 +1,21 @@
+**Explanation of the Program:**
+
+This Java program uses **MPI (Message Passing Interface)** to perform distributed computation across multiple processes. Here, the operation performed is the **calculation of a product** of numbers in a distributed fashion.
+
+---
+
+**What is MPI?**
+- MPI stands for **Message Passing Interface**.
+- It is a standardized and portable message-passing system designed to allow processes to communicate with each other in a parallel computing environment.
+- MPI helps in building applications that can run on multiple processors or machines, thus improving performance by parallelizing tasks.
+
+**Why do we use MPI in this program?**
+- To **divide the workload** of multiplying numbers among multiple processes instead of a single process doing all the work.
+- Each process computes the product of a subset of numbers.
+- Finally, these intermediate products are gathered and multiplied together to get the **final product**.
+- It demonstrates **distributed computing** concepts like **Scatter**, **Gather**, and **parallel processing**, which are important for improving efficiency in large-scale computations.
+
+---
 
 SimpleDistributedSum.java - Detailed Step-by-Step Explanation:
 
