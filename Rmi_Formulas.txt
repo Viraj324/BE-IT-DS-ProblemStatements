@@ -1,0 +1,71 @@
+Celsius to Fahrenheit: F = (c * 9/5)  + 32
+
+Fahrenheit to Celsius: C = (F - 32 ) * 5/9
+---------------------------------------------------
+
+If you want the 2’s power of a given number n, the formula is: 2^n
+
+------------------------------------------------------
+
+Miles to Kilometers: Kilometers = Miles × 1.60934
+
+Kilometers to Miles (if you need): Miles=Kilometers÷1.60934
+
+
+
+---------------------------
+Factorial of given Number : 
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        long fact = 1;
+        for (int i = 1; i <= n; i++) {
+            fact *= i;
+        }
+        System.out.println(fact);
+    }
+}
+
+-------------------------------
+Count Vowels in given word : 
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String word = sc.next();
+        int count = 0;
+        for (char ch : word.toLowerCase().toCharArray()) {
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
+
+--------------------------------
+Comparing 2 Strings and Return 
+lexicographically Largest string.
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.next();
+        String b = sc.next();
+        
+        if (a.compareTo(b) > 0) {
+            System.out.println(a);
+        } else {
+            System.out.println(b);
+        }
+    }
+}
+
+
+
