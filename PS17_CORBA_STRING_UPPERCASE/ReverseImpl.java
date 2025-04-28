@@ -13,8 +13,8 @@ class ReverseImpl extends ReversePOA
 	{
 		StringBuffer str=new StringBuffer(name); 
 		str.reverse();
-		return (("Server Send "+str));
-		// return name.toUpperCase();
+		// return (("Server Send "+str));
+		return name.toUpperCase();
 	}
 }
 

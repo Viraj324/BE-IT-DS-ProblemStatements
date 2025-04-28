@@ -24,7 +24,7 @@ class ReverseClient
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 			String str = br.readLine();
 			String tempStr = ReverseImpl.reverse_string(str);
-			System.out.println("The Reversed String is : ");
+			System.out.println("The UpperCased String is : ");
 			System.out.println(tempStr);
 
 
