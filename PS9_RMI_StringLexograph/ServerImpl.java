@@ -7,10 +7,7 @@ public class ServerImpl extends UnicastRemoteObject implements ServerIntf{
     }
 
     public String compareStr(String s1,String s2){
-        if(s1.length() > s2.length()){
-            return s1;
-        }else{
-            return s2;
-        }
+        String larger = s1.compareTo(s2) > 0 ? s1 : s2;
+        return larger;
     }
 }
