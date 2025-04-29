@@ -9,6 +9,15 @@ Date: 2025-04-28
 - It allows a Java object on one machine (client) to invoke methods on an object running on another machine (server).
 - RMI handles communication details like sockets, object serialization, and remote object references.
 
+
+RMI Registry (Remote Method Invocation Registry) is a special server-side service in Java that allows remote objects to be registered by name and then looked up by clients later to invoke their methods remotely.
+
+In simple terms:
+
+It is like a phonebook where a server registers remote objects (like saving contact names).
+
+Clients search (lookup) the name to get the remote object’s reference and call its methods across the network.
+
 ------------------------------------------------------------
 ⚙️ What it is used for?
 - To create distributed applications in Java.
